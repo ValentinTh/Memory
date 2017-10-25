@@ -1,2 +1,2 @@
 # Memory
-All things that gets out my mind
+All things that get out of my mind
