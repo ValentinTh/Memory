@@ -1,0 +1,22 @@
+Make a ProxMox Node with NAT VM available outside the local network.
+
+First install your Proxmox OS, then :
+- setup "nano /etc/apt/sources.list"
+- add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
+- edit "nano /etc/apt/sources.list.d/pve-enterprise.list"
+- coment the deb line #
+- apt-get update &&  apt-get upgrade -y
+
+CONFIG :
+- 
+
+
+SOURCES :
+- https://www.svennd.be/proxmox-ve-5-0-fix-updates-upgrades/
+- https://cyberpersons.com/2016/07/27/setup-nat-proxmox/
+- https://unix.stackexchange.com/questions/134682/iptables-add-rule-for-interface-before-it-comes-up
+- https://serverfault.com/questions/232581/permament-iptables-port-forwarding
+- https://www.tutos.snatch-crash.fr/proxmox-creation-de-conteneur-lxc/
+- https://pve.proxmox.com/wiki/Unprivileged_LXC_containers
+- https://serverfault.com/questions/729810/dnat-port-range-with-different-internal-port-range-with-iptables
+- http://linusramos.blogspot.fr/2011/07/iptables-port-forwarding.html
