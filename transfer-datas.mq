@@ -31,3 +31,7 @@ to add ssh options:
 rsync -e "ssh -P $port_value" remoteuser@remoteip  localpath
 
 --progress and --stats are useful for real-time display of transfer.
+
+
+https://bash.cyberciti.biz/backup/shell-script-to-mirror-backups-to-another-server-in-pull-mode-using-rsync/ 
+Rsync from server to backup server with SSH keys and BWlimit
