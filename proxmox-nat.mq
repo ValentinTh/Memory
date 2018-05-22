@@ -20,3 +20,9 @@ SOURCES :
 - https://pve.proxmox.com/wiki/Unprivileged_LXC_containers
 - https://serverfault.com/questions/729810/dnat-port-range-with-different-internal-port-range-with-iptables
 - http://linusramos.blogspot.fr/2011/07/iptables-port-forwarding.html
+
+
+
+A + : 
+https://bash.cyberciti.biz/virtualization/shell-script-to-setup-an-lxd-linux-containers-vm-lab-for-testing-purpose/
+Auto setup VM, IP attribution.
