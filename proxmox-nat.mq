@@ -7,6 +7,63 @@ First install your Proxmox OS, then :
 - coment the deb line #
 - apt-get update &&  apt-get upgrade -y
 
++ Mettre des templates à dispo en local pour auto install
+pveam update
+pveam available
+pveam download local #$$$$$$Package$$$$$
+pveam remove local:vztmpl/#$$$$$Package$$$$$
+
+Creation :
+Général >
+CT ID : numéro
+nom d'hote : reverse
+Cocher unprivileged
+MDP : mot de passe root
+
+Modèle >
+stockage : Local 
+modèle : choisir OS
+
+Disque root >
+size : nombre de GB
+
+CPU > 
+coeur : nb vcore
+
+Memoire >
+Ram : nb go
+swap : 256mo
+
+Réseau >
+Nom (i.e. eth0):	eth0
+Adresse MAC:	
+Pont:	vmbr1
+Tag VLAN:	
+Limite de débit (MB/s):	
+Parefeu:	
+IPv4: 
+IPv4/CIDR: 192.168.1.X/24
+Passerelle (IPv4):	192.168.1.254
+IPv6:
+IPv6/CIDR:
+Passerelle (IPv6):	
+
+DNS >
+laisser vide
+
+===== Débloquer SSH ====
+donc, console -> root -> le mdp -> nano /etc/ssh/sshd_config -> trouve "enablerootlogin: whitouth password" tu commente la ligne (# devant) tu enregistre le nano (Ctrl + x |  y | 1enter)  -> service ssh restart
+=====
+PermitRootLogin yes
+Changer le port et dé-commenter
+
+systemctl restart ssh
+
+Apt install htop
+apt install fail2ban
+systemctl restart networking
+systemctl status networking
+
 CONFIG :
 - 
 
