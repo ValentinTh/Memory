@@ -81,6 +81,7 @@ LINKS :
 - http://wiki.csnu.org/index.php/Proxmox_5
 - https://raymii.org/s/tutorials/Proxmox_VE_One_Public_IP.html
 - https://silentkernel.fr/proxmox-avec-une-seule-ip-forwarding-de-port/
+- https://angristan.xyz/setup-network-bridge-lxc-net/
 
 SOURCES :
 - https://www.svennd.be/proxmox-ve-5-0-fix-updates-upgrades/
@@ -96,3 +97,10 @@ A + :
 https://bash.cyberciti.biz/virtualization/shell-script-to-setup-an-lxd-linux-containers-vm-lab-for-testing-purpose/
 Auto setup VM, IP attribution.
 - https://www.sky-future.net/2014/01/22/tuto-installer-une-seedbox-sur-debian-avec-interface-web-lecteur-video/
+- https://www.kiloroot.com/proxmox-kimsufi-ovh-soyoustart-ipv6-host-multiple-containers-and-virtual-machines-on-a-single-kimsufi-server-using-ipv6-and-proxmox/
+- https://blog.blaisethirard.com/tag/kimsufi/
+- http://www.viedugeek.eu/topic/227-cr%C3%A9er-des-serveurs-virtuels-debian-7-wheezy-avec-lxc-sur-un-d%C3%A9di%C3%A9-ovh-kimsufi/
+- http://hw7.net/?p=252
+- http://www.guiguishow.info/2012/10/30/utiliser-lxc-sur-un-kimsufi/#toc-3009-configuration-rseau
+- http://www.guiguishow.info/2012/10/30/utiliser-lxc-sur-un-kimsufi/#toc-3009-compiler-un-noyau-utilisant-les-cgroups-grsec
+- https://blog.cepharum.de/en/post/lxc-host-featuring-ipv6-connectivity.html
