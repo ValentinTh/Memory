@@ -68,6 +68,20 @@ CONFIG :
 - 
 
 
+LINKS :
+- https://linuxconfig.org/how-to-setup-a-static-ip-address-on-debian-linux
+- https://medium.com/@cpt_midnight/static-ip-in-debian-9-stretch-acb4e5cb7dc1
+- https://debian-facile.org/doc:reseau:interfaces
+- http://community.ovh.com/t/configuration-reseau-vrack-debian-stretch/3617
+- https://www.sky-future.net/2015/12/13/tuto-proxmox-n3-creation-dun-lan-prive-et-permettre-lacces-internet-sur-ce-lan-sans-ipfo/
+- https://serverfault.com/questions/564445/how-can-i-forward-the-http-and-ssh-port-to-my-internal-server-using-iptables
+- https://askubuntu.com/questions/311053/how-to-make-ip-forwarding-permanent
+- https://www.ameir.net/blog/archives/55-running-proxmox-behind-a-single-ip-address.html/comment-page-1
+- https://www.eolya.fr/2016/02/15/ovh-proxmox-reseau-prive/
+- http://wiki.csnu.org/index.php/Proxmox_5
+- https://raymii.org/s/tutorials/Proxmox_VE_One_Public_IP.html
+- https://silentkernel.fr/proxmox-avec-une-seule-ip-forwarding-de-port/
+
 SOURCES :
 - https://www.svennd.be/proxmox-ve-5-0-fix-updates-upgrades/
 - https://cyberpersons.com/2016/07/27/setup-nat-proxmox/
@@ -78,8 +92,7 @@ SOURCES :
 - https://serverfault.com/questions/729810/dnat-port-range-with-different-internal-port-range-with-iptables
 - http://linusramos.blogspot.fr/2011/07/iptables-port-forwarding.html
 
-
-
 A + : 
 https://bash.cyberciti.biz/virtualization/shell-script-to-setup-an-lxd-linux-containers-vm-lab-for-testing-purpose/
 Auto setup VM, IP attribution.
+- https://www.sky-future.net/2014/01/22/tuto-installer-une-seedbox-sur-debian-avec-interface-web-lecteur-video/
