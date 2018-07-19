@@ -1,0 +1,10 @@
+
+
+# UPDATE
+
+https://emby.media/linux-server.html
+
+wget URL
+systemctl stop emby-server
+dpkg -i emby*
+rm URL.file
