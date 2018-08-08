@@ -5,6 +5,7 @@ Method for basic fresh install
 - setup "nano /etc/apt/sources.list"
 - add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
 systemctl restart systemd-networkd
+ls /sys/class/net/
 
 First install your Proxmox OS, then :
 - "nano /etc/apt/sources.list.d/pve-enterprise.list"
