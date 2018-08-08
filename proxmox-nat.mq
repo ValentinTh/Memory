@@ -4,7 +4,7 @@ Make a ProxMox Node with NAT VM available outside the local network.
 Method for basic fresh install
 - setup "nano /etc/apt/sources.list"
 - add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
-
+systemctl restart systemd-networkd
 
 First install your Proxmox OS, then :
 - "nano /etc/apt/sources.list.d/pve-enterprise.list"
