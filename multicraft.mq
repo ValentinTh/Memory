@@ -1,0 +1,4 @@
+curl https://raw.githubusercontent.com/ValentinTh/MultiCraft-JAR-Conf/master/daemon/multicraft-systemd.txt > multicraft.service
+cat multicraft.service 
+systemctl enable multicraft.service
+systemctl status multicraft
