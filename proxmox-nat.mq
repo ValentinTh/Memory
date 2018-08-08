@@ -1,11 +1,15 @@
 Make a ProxMox Node with NAT VM available outside the local network.
 
-First install your Proxmox OS, then :
+/etc/apt/sources.list.d/pve-install-repo.list OVH config for PVE no sub
+Method for basic fresh install
 - setup "nano /etc/apt/sources.list"
 - add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
-- edit "nano /etc/apt/sources.list.d/pve-enterprise.list"
+
+
+First install your Proxmox OS, then :
+- "nano /etc/apt/sources.list.d/pve-enterprise.list"
 - coment the deb line #
-- apt-get update &&  apt-get upgrade -y
+- apt-get update && apt-get upgrade -y
 
 + Mettre des templates à dispo en local pour auto install
 pveam update
