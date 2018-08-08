@@ -7,6 +7,8 @@ Method for basic fresh install
 systemctl restart systemd-networkd
 ls /sys/class/net/
 
+https://wiki.archlinux.org/index.php/systemd-networkd
+
 First install your Proxmox OS, then :
 - "nano /etc/apt/sources.list.d/pve-enterprise.list"
 - coment the deb line #
