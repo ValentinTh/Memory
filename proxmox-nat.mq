@@ -74,6 +74,18 @@ systemctl status networking
 CONFIG :
 - 
 
+auto vmbr2
+iface vmbr2 inet static
+        address 192.168.1.254
+        netmask 255.255.255.0
+        broadcast 192.168.1.255
+        bridge_ports LAN
+        bridge_stp off
+        bridge_fd 0
+        post-up echo 1 > /proc/sys/net/ipv4/ip_forward
+        post-up iptables -t nat -A POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
+        post-down iptables -t nat -D POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
+
 
 LINKS :
 - https://linuxconfig.org/how-to-setup-a-static-ip-address-on-debian-linux
