@@ -155,13 +155,19 @@ post-down iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport $$$$ -j DNAT --t
 ...
 
 ```
+- Reboot the node to apply
+
+======
+
 systemctl restart networking
+
 systemctl status networking
+
 systemctl restart systemd-networkd
+
 
 https://wiki.archlinux.org/index.php/systemd-networkd
 
-=====
 LINKS :
 - https://linuxconfig.org/how-to-setup-a-static-ip-address-on-debian-linux
 - https://medium.com/@cpt_midnight/static-ip-in-debian-9-stretch-acb4e5cb7dc1
