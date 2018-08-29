@@ -46,76 +46,49 @@ Method for basic fresh install (Other hosts)
 ## Software configurations
 
 ### Add templates for LXC containers
-
-pveam update
-
-pveam available # List all the templates
-
-pveam download local #$$$$$$Package$$$$$ #Add template
-
-pveam remove local:vztmpl/#$$$$$Package$$$$$ #Remove template
+- pveam update
+- pveam available # List all the templates
+- pveam download local #$$$$$$Package$$$$$ #Add template
+- pveam remove local:vztmpl/#$$$$$Package$$$$$ #Remove template
 
 ## Container LXC creation
 
-General >
+##### General
+- CT ID : number
+- HostName : reverse
+- Tick unprivileged
+- Password : root passwd
 
-CT ID : number
+##### Modele
+- Storage : Local
+- Modele : choose OS
 
-HostName : reverse
+##### Disk root
+- Size : Number of GB
 
-Tick unprivileged
+##### CPU
+- Core : nb vcore
 
-Password : root passwd
+##### Memory
+- Ram : nb gb
+- Swap : 256mo
 
-Modele >
+##### Network
+- Name (i.e. eth0): eth0
+- MAC Adress:
+- Bridge: vmbr2
+- Tag VLAN:
+- Networking limit (MB/s):
+- Firewall :
+- IPv4:
+- IPv4/CIDR: 192.168.1.X/24
+- Gateway (IPv4): 192.168.1.254
+- IPv6:
+- IPv6/CIDR:
+- Gateway (IPv6):
 
-storage : Local
-
-modele : chose OS
-
-Disk root >
-
-size : Number of GB
-
-CPU >
-
-core : nb vcore
-
-Memory >
-
-Ram : nb gb
-
-swap : 256mo
-
-Network >
-
-Name (i.e. eth0): eth0
-
-MAC Adress:
-
-Bridge:	vmbr2
-
-Tag VLAN:
-
-Networking limit (MB/s):
-
-Firewall :
-
-IPv4:
-
-IPv4/CIDR: 192.168.1.X/24
-
-Gateway (IPv4):	192.168.1.254
-
-IPv6:
-
-IPv6/CIDR:
-
-Gateway (IPv6):
-
-DNS >
-
-Let empty
+##### DNS
+- Let empty
 
 ======
 ## VM configurations
