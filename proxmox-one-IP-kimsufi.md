@@ -1,8 +1,6 @@
 Make a ProxMox Node with NAT VM available outside the local network.
-
-OS : DEBIAN 9
-
-Host : Kimsufi
+- OS : DEBIAN 9
+- Host : Kimsufi
 
 ## Basic fresh install Proxmox
 
@@ -34,15 +32,10 @@ deb-src http://debian.mirrors.ovh.net/debian stretch-updates main'
 
 - apt-get update && apt-get upgrade -y
 
-++
-
 Method for basic fresh install (Other hosts)
 - setup "nano /etc/apt/sources.list"
 - add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
 
-++
-
-===========
 ## Software configurations
 
 ### Add templates for LXC containers
@@ -90,7 +83,6 @@ Method for basic fresh install (Other hosts)
 ##### DNS
 - Let empty
 
-======
 ## VM configurations
 
 ### Unlock Root Login Debian 8/9
@@ -114,17 +106,37 @@ Default : 22
 
 - apt install htop fail2ban nload
 
-=====
-
 ## Tips
 
 ls /sys/class/net/ # Allow to know every single network interfaces available on the node.
 
-=====
-
-CONFIG :
+# CONFIG
+nano /etc/network/interfaces
 
 ```
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# for Routing
+auto vmbr1
+iface vmbr1 inet manual
+        bridge_ports dummy0
+        bridge_stp off
+        bridge_fd 0
+
+# vmbr0 : Bridging. Make sure to use only MAC adresses that were assigned to you.
+auto vmbr0
+iface vmbr0 inet static
+        address xx.xx.xx.xx/24
+        gateway xx.xx.xx.254
+        bridge_ports eno1
+        bridge_stp off
+        bridge_fd 0
+
 auto vmbr2
 iface vmbr2 inet static
         address 192.168.1.254
@@ -136,6 +148,11 @@ iface vmbr2 inet static
         post-up echo 1 > /proc/sys/net/ipv4/ip_forward
         post-up iptables -t nat -A POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
         post-down iptables -t nat -D POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
+
+#VM NAT
+post-up iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport $$$$ -j DNAT --to 192.168.1.x:$$$$
+post-down iptables -t nat -A PREROUTING -i vmbr0 -p tcp --dport $$$$ -j DNAT --to 192.168.1.x:$$$$
+...
 
 ```
 systemctl restart networking
