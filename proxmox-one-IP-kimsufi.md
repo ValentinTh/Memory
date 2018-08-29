@@ -1,5 +1,7 @@
 Make a ProxMox Node with NAT VM available outside the local network.
+
 OS : DEBIAN 9
+
 Host : Kimsufi
 
 ## Basic fresh install Proxmox
@@ -9,11 +11,16 @@ First install your Proxmox OS, then :
 - coment the deb line #
 
 nano /etc/apt/sources.list.d/pve-install-repo.list (OVH config file for DEB PVE No sub)
-'deb http://download.proxmox.com/debian stretch pvetest
-deb http://download.proxmox.com/debian stretch pve-no-subscription'
+
+```
+deb http://download.proxmox.com/debian stretch pvetest
+deb http://download.proxmox.com/debian stretch pve-no-subscription
+```
 
 nano nano /etc/apt/sources.list (Config file for debian DEB based on OVH sources)
-'#
+
+```
+#
 deb http://debian.mirrors.ovh.net/debian stretch main contrib non-free
 deb-src http://debian.mirrors.ovh.net/debian stretch main contrib non-free
 
@@ -23,13 +30,16 @@ deb-src http://security.debian.org/debian-security stretch/updates main
 # stretch-updates, previously known as 'volatile'
 deb http://debian.mirrors.ovh.net/debian stretch-updates main
 deb-src http://debian.mirrors.ovh.net/debian stretch-updates main'
+```
 
 - apt-get update && apt-get upgrade -y
 
 ++
+
 Method for basic fresh install (Other hosts)
 - setup "nano /etc/apt/sources.list"
 - add "deb http://download.proxmox.com/debian stretch pve-no-subscription"
+
 ++
 
 ===========
@@ -37,48 +47,74 @@ Method for basic fresh install (Other hosts)
 
 ### Add templates for LXC containers
 
-+ Mettre des templates à dispo en local pour auto install
 pveam update
+
 pveam available # List all the templates
+
 pveam download local #$$$$$$Package$$$$$ #Add template
+
 pveam remove local:vztmpl/#$$$$$Package$$$$$ #Remove template
 
 ## Container LXC creation
+
 General >
+
 CT ID : number
+
 HostName : reverse
+
 Tick unprivileged
+
 Password : root passwd
 
 Modele >
-storage : Local 
+
+storage : Local
+
 modele : chose OS
 
 Disk root >
+
 size : Number of GB
 
-CPU > 
+CPU >
+
 core : nb vcore
 
 Memory >
-Ram : nb go
+
+Ram : nb gb
+
 swap : 256mo
 
 Network >
+
 Name (i.e. eth0): eth0
-MAC Adress:	
+
+MAC Adress:
+
 Bridge:	vmbr2
-Tag VLAN:	
-Networking limit (MB/s):	
-Firewall :	
-IPv4: 
+
+Tag VLAN:
+
+Networking limit (MB/s):
+
+Firewall :
+
+IPv4:
+
 IPv4/CIDR: 192.168.1.X/24
+
 Gateway (IPv4):	192.168.1.254
+
 IPv6:
+
 IPv6/CIDR:
-Gateway (IPv6):	
+
+Gateway (IPv6):
 
 DNS >
+
 Let empty
 
 ======
@@ -101,7 +137,7 @@ Default : 22
 - Save and exit
 - systemctl restart ssh
 
-### usefull tools
+### Usefull tools
 
 - apt install htop fail2ban nload
 
@@ -112,9 +148,10 @@ Default : 22
 ls /sys/class/net/ # Allow to know every single network interfaces available on the node.
 
 =====
-CONFIG :
-- 
 
+CONFIG :
+
+```
 auto vmbr2
 iface vmbr2 inet static
         address 192.168.1.254
@@ -127,12 +164,13 @@ iface vmbr2 inet static
         post-up iptables -t nat -A POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
         post-down iptables -t nat -D POSTROUTING -s '192.168.1.0/24' -o vmbr0 -j MASQUERADE
 
-
+```
 systemctl restart networking
 systemctl status networking
 systemctl restart systemd-networkd
 
 https://wiki.archlinux.org/index.php/systemd-networkd
+
 =====
 LINKS :
 - https://linuxconfig.org/how-to-setup-a-static-ip-address-on-debian-linux
