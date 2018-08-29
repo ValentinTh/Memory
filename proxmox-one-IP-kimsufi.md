@@ -128,7 +128,7 @@ iface vmbr1 inet manual
         bridge_stp off
         bridge_fd 0
 
-# vmbr0 : Bridging. Make sure to use only MAC adresses that were assigned to you.
+# vmbr0 : Bridging. Make sure to use only MAC adresses that were assigned to you. Public IP attribution.
 auto vmbr0
 iface vmbr0 inet static
         address xx.xx.xx.xx/24
@@ -137,6 +137,7 @@ iface vmbr0 inet static
         bridge_stp off
         bridge_fd 0
 
+# vmbr2 : LAN. Allow to forward locally incoming and outgoing data transfers.
 auto vmbr2
 iface vmbr2 inet static
         address 192.168.1.254
