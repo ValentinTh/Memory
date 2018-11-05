@@ -33,3 +33,15 @@ $ tar -zxvf prog-1-jan-2005.tar.gz -C /tmp
 $ cd /tmp
 
 $ ls - 
+
+======
+
+# ZIP
+
+zip -r name-of-archive.zip folder
+
+# UNZIP
+
+unzip name-of-archive.zip -d folder
+
+
