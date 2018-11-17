@@ -43,6 +43,7 @@ Method for basic fresh install (Other hosts)
 - pveam available # List all the templates
 - pveam download local #$$$$$$Package$$$$$ #Add template
 - pveam remove local:vztmpl/#$$$$$Package$$$$$ #Remove template
+- pveam list local #List all saved templates
 
 ## Container LXC creation
 
