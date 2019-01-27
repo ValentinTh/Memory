@@ -207,16 +207,18 @@ Auto setup VM, IP attribution.
 - http://www.guiguishow.info/2012/10/30/utiliser-lxc-sur-un-kimsufi/#toc-3009-compiler-un-noyau-utilisant-les-cgroups-grsec
 - https://blog.cepharum.de/en/post/lxc-host-featuring-ipv6-connectivity.html
 
-
-
-
 ONLINE :
+
 "nano /etc/apt/sources.list.d/pve-install-repo.list"
+
 ```
 deb http://download.proxmox.com/debian stretch pve-no-subscription
+```
 
 "nano /etc/apt/sources.list"
-```# deb http://mirrors.online.net/debian stretch main
+
+```
+# deb http://mirrors.online.net/debian stretch main
 
 deb http://mirrors.online.net/debian stretch main non-free contrib
 deb-src http://mirrors.online.net/debian stretch main non-free contrib
