@@ -226,3 +226,14 @@ deb-src http://mirrors.online.net/debian stretch main non-free contrib
 deb http://security.debian.org/debian-security stretch/updates main contrib non-free
 deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free
 ```
+
+dpkg-reconfigure tzdata
+
+Change DNS
+
+```
+Search domain:	SRV
+DNS server 1:	1.1.1.1
+DNS server 2:	9.9.9.9
+DNS server 3:	8.8.8.8
+```
