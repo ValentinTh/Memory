@@ -2,3 +2,16 @@ apt-get install gnupg curl
 
 echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
 curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+
+wget https://downloads.plex.tv/plex-media-server/1.14.1.5488-cc260c476/plexmediaserver_1.14.1.5488-cc260c476_amd64.deb
+
+sudo dpkg -i plexmediaserver_1.14.1.5488-cc260c476_amd64.deb
+
+
+http://127.0.0.1:32400/web
+
+
+https://support.plex.tv/articles/200288586-installation/
+https://support.plex.tv/articles/235974187-enable-repository-updating-for-supported-linux-server-distributions/
+https://forums.plex.tv/t/how-can-i-fix-the-following-the-repository-https-downloads-plex-tv-repo-deb-public-release/235993/5
+https://forums.plex.tv/t/conflicting-distribution-error-when-updating-plex-repo-via-apt-in-ubuntu-18-04/238152/15
