@@ -19,8 +19,8 @@ https://forums.plex.tv/t/conflicting-distribution-error-when-updating-plex-repo-
 
 
 ## Forward the Port in the Router
-
 In order to forward a port for Plex Media Server, you’ll need three main pieces of information:
 WAN/External Port: Port 32400 (TCP) is default, but you can generally use any available port in the 20,000 to 50,000 range.
 LAN/Internal Port: This will always be 32400.
 IP Address: The local IP Address of the computer running the Plex Media Server. This is what you did above.
+https://www.linode.com/docs/applications/media-servers/install-plex-media-server-on-ubuntu-16-04/#install-plex
