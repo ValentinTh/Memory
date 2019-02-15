@@ -237,3 +237,5 @@ DNS server 1:	1.1.1.1
 DNS server 2:	9.9.9.9
 DNS server 3:	8.8.8.8
 ```
+https://pve.proxmox.com/pve-docs/pct.1.html
+Command to execute modifications on Containers LXC.
