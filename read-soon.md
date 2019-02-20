@@ -12,6 +12,8 @@ https://linuxconfig.org/how-to-configure-a-nfs-file-server-on-ubuntu-18-04-bioni
 
 https://wiki.debian.org/NFSServerSetup
 
+https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04
+
 https://hookbin.com
 
 https://wpamelia.com/blog-name-generator/
