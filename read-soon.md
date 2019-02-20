@@ -12,3 +12,8 @@ https://linuxconfig.org/how-to-configure-a-nfs-file-server-on-ubuntu-18-04-bioni
 
 https://wiki.debian.org/NFSServerSetup
 
+https://hookbin.com
+
+https://wpamelia.com/blog-name-generator/
+
+https://www.ethernetservers.com/vps-hosting
