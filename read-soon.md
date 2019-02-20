@@ -19,3 +19,10 @@ https://hookbin.com
 https://wpamelia.com/blog-name-generator/
 
 https://www.ethernetservers.com/vps-hosting
+
+https://dashboardpack.com/theme-details/architectui-html-dashboard-free/
+
+https://github.com/designmodo/html-website-templates/
+
+https://pixelbuddha.net/freebie/art-deco-geometric-patterns/
+
