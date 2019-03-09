@@ -12,9 +12,13 @@ http://127.0.0.1:32400/web
 
 
 https://support.plex.tv/articles/200288586-installation/
+
 https://support.plex.tv/articles/200931138-troubleshooting-remote-access/
+
 https://support.plex.tv/articles/235974187-enable-repository-updating-for-supported-linux-server-distributions/
+
 https://forums.plex.tv/t/how-can-i-fix-the-following-the-repository-https-downloads-plex-tv-repo-deb-public-release/235993/5
+
 https://forums.plex.tv/t/conflicting-distribution-error-when-updating-plex-repo-via-apt-in-ubuntu-18-04/238152/15
 
 
